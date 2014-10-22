@@ -51,6 +51,7 @@ Function FilterEnvironment {
 
 Function RunCql {
     Process {
+        Write-Host "Running $($_.FullName)..."
         & $cqlsh $hostName -u $username -p $password -f $_.FullName
     }
 }
